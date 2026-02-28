@@ -22,7 +22,7 @@
 [Coordinating volunteers for events is often time-consuming and disorganized. Organizations struggle to manage applications, track participation, and communicate with volunteers efficiently. Volunteers may miss opportunities or face difficulties applying and updating their registration. There is a need for a simple digital platform that allows organizations to post events, track applications, and lets volunteers browse, apply, or cancel registrations easily, ensuring smooth coordination and increased participation.]
 
 ### The Solution
-[How are you solving it?]
+[VolunGo Web App provides a simple web-based platform to solve the coordination problem. Organizations can post events, track volunteer applications, and accept or reject participants. Volunteers can browse available opportunities, apply, or cancel their registration. All data is stored in localStorage, ensuring persistence across sessions without needing a backend. This digital system streamlines event management, reduces manual work, and improves volunteer engagement.]
 
 ---
 
@@ -31,10 +31,11 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [e.g., HTML,CSS,JavaScript]
+- Frameworks used: []
+- Libraries used: [<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">]
+- Tools used: [e.g., VS Code, Git]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,10 +47,30 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [1. Volunteer Profile Management
+Create volunteer account with username and password
+Secure login/logout system
+Profile dashboard with personal information
+Track joined date and application history
+View all submitted applications in one place]
+- Feature 2: [2. Organization Profile Management
+Create organization account with name and email
+Secure login/logout for organizations
+Organization dashboard with statistics
+View all posted events and volunteer applications
+Manage multiple events simultaneously]
+- Feature 3: [3. Event Management System
+Organizations can post volunteer opportunities
+Events include: name, location, date, required skills
+Dynamic event listing and filtering
+Volunteers browse events on opportunities page
+Event information display with organization details]
+- Feature 4: [4. Event Application & Registration
+Volunteers apply for specific events from their profile
+Direct volunteer registration form for quick signup
+Application tracking per volunteer
+Duplicate application prevention
+Application confirmation and status updates, Application Review & Approval System,Real-Time Notification System,Responsive Design, User Authentication & Session Management, Volunteer Registration Form, Navigation & Site Structure, Data Persistence,Professional UI/UX, Organization-Only Features, Volunteer-Only Features]
 
 ---
 
@@ -81,27 +102,36 @@ List the key features of your project:
 
 ### For Software:
 
-#### Screenshots (Add at least 3)
+#### Screenshots 
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1](<img width="1200" height="718" alt="Screenshot 2026-02-28 090625" src="https://github.com/user-attachments/assets/2acfe883-0484-4874-95a8-bd729bbb7161" />
+)
+*available oppurtunities
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2](<img width="1279" height="620" alt="Screenshot 2026-02-28 090818" src="https://github.com/user-attachments/assets/23973553-deca-435e-a56c-b8cc00d42028" />
+)
+*Application status*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot3](<img width="1125" height="634" alt="Screenshot 2026-02-28 100751" src="https://github.com/user-attachments/assets/d4c47015-4645-47ff-b9e5-676659a190cd" />
+screen shot4 <img width="1107" height="623" alt="Screenshot 2026-02-28 101738" src="https://github.com/user-attachments/assets/57eaa546-aa69-4f6e-b048-58d666275327" />
+no. of events registered and further suggestions on events
+
+)
+organization logic page
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram](![WhatsApp Image 2026-02-28 at 10 17 16](https://github.com/user-attachments/assets/b9bc3f03-a986-4e9f-adff-6caf2e38e063)
+
+)
 *Explain your system architecture - components, data flow, tech stack interaction*
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
+![Workflow](![WhatsApp Image 2026-02-28 at 10 20 59](https://github.com/user-attachments/assets/5cabd840-0cbc-4b26-8590-33c67d059c91))
+
 *Add caption explaining your workflow*
 
 ---
