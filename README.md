@@ -104,12 +104,15 @@ Application confirmation and status updates, Application Review & Approval Syste
 
 #### Screenshots 
 
-![Screenshot1](<img width="1200" height="718" alt="Screenshot 2026-02-28 090625" src="https://github.com/user-attachments/assets/2acfe883-0484-4874-95a8-bd729bbb7161" />
+![Screenshot1](<img width="1200" height="718" alt="Screenshot 2026-02-28 090625" src="https://github.com/user-attachments/assets/0b116f4a-d955-409e-97b7-169b4d359781" />
+)
 )
 *available oppurtunities
 
-![Screenshot2](<img width="1279" height="620" alt="Screenshot 2026-02-28 090818" src="https://github.com/user-attachments/assets/23973553-deca-435e-a56c-b8cc00d42028" />
-)
+![Screenshot2](
+<img width="1279" height="620" alt="Screenshot 2026-02-28 090818" src="https://github.com/user-attachments/assets/6b5a0baf-53d7-48d5-8f65-ef0a34f862ee" />)
+
+
 *Application status*
 
 ![Screenshot3](<img width="1125" height="634" alt="Screenshot 2026-02-28 100751" src="https://github.com/user-attachments/assets/d4c47015-4645-47ff-b9e5-676659a190cd" />
