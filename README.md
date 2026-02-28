@@ -80,12 +80,12 @@ Application confirmation and status updates, Application Review & Approval Syste
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+[Installation commands - e.g., ]
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+[Run commands - e.g.,]
 ```
 
 ### For Hardware:
