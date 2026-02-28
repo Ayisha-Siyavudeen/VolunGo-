@@ -106,6 +106,7 @@ Application confirmation and status updates, Application Review & Approval Syste
 
 ![Screenshot1](<img width="1200" height="718" alt="Screenshot 2026-02-28 090625" src="https://github.com/user-attachments/assets/0b116f4a-d955-409e-97b7-169b4d359781" />
 )
+
 )
 *available oppurtunities
 
