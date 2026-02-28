@@ -13,13 +13,13 @@
 - Member 2: [Ayisha Siyavudheen] - [TKM college of engineerin]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[https://ayisha-siyavudeen.github.io/VolunGo-/]
 
 ### Project Description
-[2-3 lines about what your project does]
+[VolunGo Website connects organizations with volunteers, making it easier to manage events and participation efficiently. Volunteers can browse, apply, or cancel their registration, while organizations can track applications and accept or reject participants. This project is relevant because it simplifies volunteering coordination, saves time for both organizations and volunteers, and promotes community engagement.]
 
 ### The Problem statement
-[What problem are you solving?]
+[Coordinating volunteers for events is often time-consuming and disorganized. Organizations struggle to manage applications, track participation, and communicate with volunteers efficiently. Volunteers may miss opportunities or face difficulties applying and updating their registration. There is a need for a simple digital platform that allows organizations to post events, track applications, and lets volunteers browse, apply, or cancel registrations easily, ensuring smooth coordination and increased participation.]
 
 ### The Solution
 [How are you solving it?]
