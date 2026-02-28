@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunGo - Organization Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>VolunGo</h1>
+    <p>Volunteer. Grow. Lead...</p>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="index1.html">Opportunities</a>
+        <a href="organization-profile.html">Org Profile</a>
+        <a href="leaderboard.html">Leaderboard</a>
+    </div>
+</div>
+
+<!-- Login Section -->
+<div id="orgLoginSection">
+    <h2>Organization Login</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Login to your organization profile or create a new one to post opportunities</p>
+
+    <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+        
+        <!-- Login Form -->
+        <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0,0,0,0.1); flex: 1; min-width: 300px; max-width: 450px;">
+            <h3 style="color: #00796b; margin-bottom: 20px;">Existing Organization</h3>
+            <form onsubmit="event.preventDefault(); loginOrganization();">
+                <label for="orgLoginUsername"><strong>Username</strong></label>
+                <input type="text" id="orgLoginUsername" placeholder="Enter your username" required>
+
+                <label for="orgLoginPassword"><strong>Password</strong></label>
+                <input type="password" id="orgLoginPassword" placeholder="Enter your password" required>
+
+                <button type="submit" style="width: 100%; margin-top: 20px;">Login</button>
+            </form>
+        </div>
+
+        <!-- Register Form -->
+        <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0,0,0,0.1); flex: 1; min-width: 300px; max-width: 450px;">
+            <h3 style="color: #00796b; margin-bottom: 20px;">New Organization</h3>
+            <form onsubmit="event.preventDefault(); createOrganizationProfile();">
+                <label for="orgRegUsername"><strong>Username</strong></label>
+                <input type="text" id="orgRegUsername" placeholder="Create username" required>
+
+                <label for="orgRegPassword"><strong>Password</strong></label>
+                <input type="password" id="orgRegPassword" placeholder="Create password" required>
+
+                <label for="orgRegName"><strong>Organization Name</strong></label>
+                <input type="text" id="orgRegName" placeholder="Enter organization name" required>
+
+                <label for="orgRegEmail"><strong>Email</strong></label>
+                <input type="email" id="orgRegEmail" placeholder="Enter organization email" required>
+
+                <button type="submit" style="width: 100%; margin-top: 20px;">Create Profile</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Organization Dashboard -->
+<div id="orgDashboard" style="display: none;">
+    
+    <!-- Header with Logout -->
+    <div style="background: white; padding: 20px; margin: 20px auto; max-width: 1000px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div>
+            <h2 style="margin: 0; color: #00796b;">Welcome, <span id="orgName"></span>!</h2>
+            <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;"><strong>Email:</strong> <span id="orgEmail"></span></p>
+        </div>
+        <button onclick="logoutOrganization()" style="background-color: #dc3545; padding: 10px 20px; color: white; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">Logout</button>
+    </div>
+
+    <!-- Stats -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto 30px;">
+        <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); text-align: center;">
+            <h4 style="margin: 0 0 10px 0; color: #00796b;">Events Posted</h4>
+            <p style="margin: 0; font-size: 28px; font-weight: bold; color: #00796b;" id="eventsCount">0</p>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); text-align: center;">
+            <h4 style="margin: 0 0 10px 0; color: #00796b;">Total Applications</h4>
+            <p style="margin: 0; font-size: 28px; font-weight: bold; color: #00796b;" id="applicationsCount">0</p>
+        </div>
+    </div>
+
+    <!-- Post New Event -->
+    <h2 style="text-align: center; margin-top: 40px; margin-bottom: 10px;">Post New Event</h2>
+    
+    <form id="orgEventForm" onsubmit="event.preventDefault(); orgPostEvent();" style="background: white; padding: 30px; max-width: 700px; margin: 20px auto; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0,0,0,0.1);">
+        <label for="orgEventName"><strong>Event Name *</strong></label>
+        <input type="text" id="orgEventName" placeholder="Enter event name" required>
+
+        <label for="orgEventLocation"><strong>Location *</strong></label>
+        <input type="text" id="orgEventLocation" placeholder="Enter location" required>
+
+        <label for="orgEventDate"><strong>Date *</strong></label>
+        <input type="date" id="orgEventDate" required>
+
+        <label for="orgEventSkills"><strong>Skills Required *</strong></label>
+        <textarea id="orgEventSkills" placeholder="Enter required skills (comma separated)" required></textarea>
+
+        <button type="submit" style="width: 100%; margin-top: 20px;">Post Event</button>
+    </form>
+
+    <!-- Posted Events -->
+    <h2 style="text-align: center; margin-top: 40px;">Your Events</h2>
+    <div id="orgPostedEvents" style="max-width: 1000px; margin: 20px auto; padding: 0 16px;">
+        <!-- Posted events will be shown here -->
+    </div>
+
+    <!-- Applications Management -->
+    <h2 style="text-align: center; margin-top: 40px;">Volunteer Applications</h2>
+    <div id="orgApplications" style="max-width: 1000px; margin: 20px auto; padding: 0 16px;">
+        <!-- Applications will be shown here -->
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

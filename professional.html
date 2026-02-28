@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Organization Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1>VolunGo - Organization Dashboard</h1>
+    <p>Post Opportunities and Manage Volunteers</p>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="index1.html">Opportunities</a>
+        <a href="profile.html">Profile</a>
+        <a href="organization-profile.html">Org Profile</a>
+        <a href="leaderboard.html">Leaderboard</a>
+    </div>
+</div>
+
+    <h2>Post New Event</h2>
+
+    <form id="eventForm" onsubmit="event.preventDefault(); postOpportunity();">
+        <input type="text" id="eventName" placeholder="Event Name" required><br><br>
+        <input type="text" id="location" placeholder="Location" required><br><br>
+        <input type="date" id="date" required><br><br>
+        <textarea id="skills" placeholder="Skills Required (separate by commas)" required></textarea><br><br>
+
+        <button type="submit">Post Event</button>
+    </form>
+
+    <hr><br>
+
+    <h2>Posted Events</h2>
+    <div id="eventList"></div>
+
+    <hr><br>
+
+    <h2>Volunteer Applications</h2>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Skills</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>Aisha</td>
+            <td>aisha@email.com</td>
+            <td>Teaching</td>
+            <td>
+                <button onclick="acceptVolunteer(this)">Accept</button>
+                <button onclick="rejectVolunteer(this)">Reject</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Rahul</td>
+            <td>rahul@email.com</td>
+            <td>Cleaning</td>
+            <td>
+                <button onclick="acceptVolunteer(this)">Accept</button>
+                <button onclick="rejectVolunteer(this)">Reject</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

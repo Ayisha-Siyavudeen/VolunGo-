@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunGo - Volunteer Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>VolunGo</h1>
+    <p>Volunteer. Grow. Lead...</p>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="index1.html">Opportunities</a>
+        <a href="profile.html">Profile</a>
+        <a href="organization-profile.html">Org Profile</a>
+        <a href="leaderboard.html">Leaderboard</a>
+    </div>
+</div>
+
+<!-- Login Section -->
+<div id="loginSection">
+    <h2>Volunteer Login</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Login to your profile or create a new one to get started</p>
+
+    <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+        
+        <!-- Login Form -->
+        <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0,0,0,0.1); flex: 1; min-width: 300px; max-width: 450px;">
+            <h3 style="color: #00796b; margin-bottom: 20px;">Existing Member</h3>
+            <form onsubmit="event.preventDefault(); loginVolunteer();">
+                <label for="loginUsername"><strong>Username</strong></label>
+                <input type="text" id="loginUsername" placeholder="Enter your username" required>
+
+                <label for="loginPassword"><strong>Password</strong></label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+                <button type="submit" style="width: 100%; margin-top: 20px;">Login</button>
+            </form>
+        </div>
+
+        <!-- Register Form -->
+        <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0px 4px 12px rgba(0,0,0,0.1); flex: 1; min-width: 300px; max-width: 450px;">
+            <h3 style="color: #00796b; margin-bottom: 20px;">New Member</h3>
+            <form onsubmit="event.preventDefault(); createProfile();">
+                <label for="regUsername"><strong>Username</strong></label>
+                <input type="text" id="regUsername" placeholder="Create username" required>
+
+                <label for="regPassword"><strong>Password</strong></label>
+                <input type="password" id="regPassword" placeholder="Create password" required>
+
+                <label for="regFullName"><strong>Full Name</strong></label>
+                <input type="text" id="regFullName" placeholder="Enter your full name" required>
+
+                <label for="regEmail"><strong>Email</strong></label>
+                <input type="email" id="regEmail" placeholder="Enter your email" required>
+
+                <button type="submit" style="width: 100%; margin-top: 20px;">Create Profile</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Profile Dashboard Section -->
+<div id="profileDashboard" style="display: none;">
+    
+    <!-- Profile Header & Logout -->
+    <div style="background: white; padding: 20px; margin: 20px auto; max-width: 1000px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div>
+            <h2 style="margin: 0; color: #00796b;">Welcome, <span id="profileName"></span>!</h2>
+            <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;"><strong>Email:</strong> <span id="profileEmail"></span></p>
+        </div>
+        <button onclick="logoutVolunteer()" style="background-color: #dc3545; padding: 10px 20px; color: white; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">Logout</button>
+    </div>
+
+    <!-- Profile Stats -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto 30px;">
+        <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); text-align: center;">
+            <h4 style="margin: 0 0 10px 0; color: #00796b;">Events Applied</h4>
+            <p style="margin: 0; font-size: 28px; font-weight: bold; color: #00796b;" id="appliedCount">0</p>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); text-align: center;">
+            <h4 style="margin: 0 0 10px 0; color: #00796b;">Member Since</h4>
+            <p style="margin: 0; font-size: 14px; color: #666;" id="memberSince"></p>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <h2 style="text-align: center; margin-top: 40px;">📬 Application Status Notifications</h2>
+    <div id="notifications" style="max-width: 1000px; margin: 20px auto; padding: 0 16px;">
+        <!-- Notifications will be loaded here -->
+    </div>
+
+    <!-- Available Events -->
+    <h2 style="text-align: center; margin-top: 40px;">Available Events</h2>
+    <div id="availableEvents" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 20px auto; padding: 0 16px;">
+        <!-- Events will be loaded here -->
+    </div>
+
+    <!-- Applied Events -->
+    <h2 style="text-align: center; margin-top: 40px;">My Applications</h2>
+    <div id="appliedEvents" style="max-width: 1000px; margin: 20px auto; padding: 0 16px;">
+        <!-- Applied events will be loaded here -->
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunGo - Volunteer Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header volunteer-header">
+    <h1>VolunGo</h1>
+    <p>Volunteer. Grow. Lead...</p>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="index1.html">Opportunities</a>
+        <a href="profile.html">Profile</a>
+        <a href="organization-profile.html">Org Profile</a>
+        <a href="leaderboard.html">Leaderboard</a>
+    </div>
+</div>
+
+<h2>Volunteer Registration</h2>
+<p style="text-align: center; color: #666; font-size: 16px;">Join our community and make a difference. Register now to start volunteering!</p>
+
+<div id="appliedEventInfo" style="display: none; background: #e3f2fd; border-left: 4px solid #00796b; padding: 16px; margin: 20px auto; max-width: 600px; border-radius: 4px;">
+    <p style="margin: 0; color: #1565c0;"><strong>📝 Applying for:</strong> <span id="eventName" style="color: #00796b; font-weight: bold;"></span></p>
+</div>
+
+<form id="volunteerForm" onsubmit="event.preventDefault(); registerVolunteer();">
+    <h3 style="color: #00796b; margin-bottom: 20px;">Personal Information</h3>
+
+    <label for="fullName"><strong>Full Name *</strong></label>
+    <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+    <label for="email"><strong>Email Address *</strong></label>
+    <input type="email" id="email" placeholder="Enter your email address" required>
+
+    <label for="phone"><strong>Phone Number *</strong></label>
+    <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+    <label for="age"><strong>Age *</strong></label>
+    <input type="number" id="age" min="18" max="120" placeholder="Enter your age" required>
+
+    <label for="location"><strong>City/Location *</strong></label>
+    <input type="text" id="location" placeholder="Enter your city or location" required>
+
+    <h3 style="color: #00796b; margin-bottom: 20px; margin-top: 30px;">Skills & Experience</h3>
+
+    <label for="skills"><strong>Skills *</strong></label>
+    <textarea id="skills" placeholder="List your skills (e.g., Teaching, Photography, Web Design, etc.)" required></textarea>
+
+    <label for="experience"><strong>Previous Volunteer Experience *</strong></label>
+    <select id="experience" required>
+        <option value="">Select an option</option>
+        <option value="newbie">First time volunteering</option>
+        <option value="1-2 years">1-2 years</option>
+        <option value="2-5 years">2-5 years</option>
+        <option value="5+ years">5+ years</option>
+    </select>
+
+    <label for="interests"><strong>Areas of Interest *</strong></label>
+    <textarea id="interests" placeholder="What causes are you interested in? (e.g., Education, Environment, Social Impact, etc.)" required></textarea>
+
+    <h3 style="color: #00796b; margin-bottom: 20px; margin-top: 30px;">Availability</h3>
+
+    <label for="availability"><strong>How much time can you commit? *</strong></label>
+    <select id="availability" required>
+        <option value="">Select an option</option>
+        <option value="weekends">Weekends only</option>
+        <option value="weekdays">Weekdays only</option>
+        <option value="flexible">Flexible schedule</option>
+        <option value="full-time">Full-time commitment</option>
+    </select>
+
+    <label for="hoursPerWeek"><strong>Hours Per Week *</strong></label>
+    <input type="number" id="hoursPerWeek" min="1" max="100" placeholder="How many hours per week?" required>
+
+    <h3 style="color: #00796b; margin-bottom: 20px; margin-top: 30px;">Additional Information</h3>
+
+    <label for="motivation"><strong>Tell us about your motivation *</strong></label>
+    <textarea id="motivation" placeholder="Why do you want to volunteer?" required></textarea>
+
+    <label style="margin-top: 20px;">
+        <input type="checkbox" id="terms" required>
+        <span style="color: #333; margin-left: 8px;">I agree to the terms and conditions and privacy policy</span>
+    </label>
+
+    <button type="submit" style="width: 100%; margin-top: 25px; padding: 12px 20px; font-size: 16px;">
+        Register as Volunteer
+    </button>
+</form>
+
+<div id="successMessage" style="display: none; background: #d4edda; color: #155724; padding: 20px; margin: 20px auto; max-width: 600px; border-radius: 8px; text-align: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+    <h3>Registration Successful!</h3>
+    <p>Thank you for registering as a volunteer with VolunGo!</p>
+    <p>We will review your profile and get back to you with opportunities that match your skills.</p>
+    <p id="appliedEventConfirmation" style="display: none; margin-top: 12px; color: #155724; font-size: 15px;"><strong>✓ Your application for <span id="appliedEventName"></span> has been submitted!</strong></p>
+    <a href="index1.html" style="background-color: #00796b; color: white; padding: 10px 20px; border-radius: 25px; display: inline-block; margin-top: 10px;">View Opportunities</a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
